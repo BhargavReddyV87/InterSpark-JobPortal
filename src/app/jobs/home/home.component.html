@@ -1,0 +1,29 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col col-md-4  mb-2">
+    <a routerLink="/jobs/new" class="btn btn-primary">Add A New Job</a>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let job of jobs$ | async">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"> <b>Job Id Number:</b> {{ job.id }}-<span>{{job.job_number}}</span></h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Job Title:</b> {{ job.job_title }}</li>
+          <li class="list-group-item"><b>Job number:</b> {{ job.job_number }}</li>
+          <li class="list-group-item"><p class="description"><b>Job Notes:</b> {{job.job_notes}}</p></li>
+          <li class="list-group-item"><span class="openings"><b>Number Of Openings:</b> {{job.number_of_openings}}</span></li>
+          <div class="action">
+            <li class="list-group-item"><b>Start Date:</b> {{job.job_start_date}}</li>
+            <li class="list-group-item"><b>End Date</b>{{job.job_close_date}}</li>
+          </div>
+        </ul>
+        <div class="col col-md-4 offset-md-4 p-2">
+          <a [routerLink]="['/jobs', job.id]" class="btn btn-info btn-sm">Show Job Details</a>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

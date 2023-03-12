@@ -1,0 +1,23 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"> <b>Job Id Number:</b> {{ oneJob$.id }}-<span>{{oneJob$.job_number}}</span></h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Job Title:</b> {{ oneJob$.job_title }}</li>
+          <li class="list-group-item"><b>Job number:</b> {{ oneJob$.job_number }}</li>
+          <li class="list-group-item"><p class="description"><b>Job Notes:</b> {{oneJob$.job_notes}}</p></li>
+          <li class="list-group-item"><span class="openings"><b>Number Of Openings:</b> {{oneJob$.number_of_openings}}</span></li>
+          <div class="action">
+            <li class="list-group-item"><b>Start Date:</b> {{oneJob$.job_start_date}}</li>
+            <li class="list-group-item"><b>End Date</b>{{oneJob$.job_close_date}}</li>
+          </div>
+        </ul>
+    </div>
+  </div>
+  <div class="col col-md-4 offset-md-4">
+    <a routerLink="/" class="btn btn-dark">Back To Jobs</a>
+  </div>
+</div>

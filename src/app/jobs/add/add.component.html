@@ -1,0 +1,68 @@
+<div class="container">
+  <legend>Add A New Job</legend>
+  <div class="mb-3">
+    <label for="txtJobtitle" class="form-label">Job title</label>
+    <input
+      type="text"
+      [(ngModel)]="jobForm.job_title"
+      class="form-control"
+      id="txtJobtitle"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtJobnumber" class="form-label">Job number</label>
+    <input
+      type="text"
+      [(ngModel)]="jobForm.job_number"
+      class="form-control"
+      id="txtJobnumber"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtJobopening" class="form-label">Job number of openings</label>
+    <input
+      type="text"
+      [(ngModel)]="jobForm.number_of_openings"
+      class="form-control"
+      id="txtJobopening"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtJobName" class="form-label">Job Notes</label>
+    <input
+      type="text"
+      [(ngModel)]="jobForm.job_notes"
+      class="form-control"
+      id="txtJobName"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="txtJobExperience" class="form-label">Experience Required</label>
+    <input
+      type="text"
+      [(ngModel)]="jobForm.experience_required"
+      class="form-control"
+      id="txtJobExperience"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtJobExperience" class="form-label">Effective date</label>
+    <input
+      type="date"
+      [(ngModel)]="jobForm.job_start_date"
+      class="form-control"
+      id="txtJobExperience"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtJobExperience" class="form-label">End Date</label>
+    <input
+      type="date"
+      [(ngModel)]="jobForm.job_close_date"
+      class="form-control"
+      id="txtJobExperience"
+    />
+  </div>
+  <button type="button" class="btn btn-dark" (click)="save()">Create</button>
+</div>
